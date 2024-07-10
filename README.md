@@ -23,70 +23,50 @@
 10. [Appendices](#12-appendices)
 
 ## 3. Introduction
-- **Purpose**: The purpose of this thesis is to develop and analyze a robust web-based platform that empowers users to effortlessly navigate the complexities of airline reservations. By integrating advanced technologies and user-centric design principles, the platform aims to enhance the overall booking experience, from flight discovery to payment confirmation.
+- **Purpose**: The purpose of this project is to develop and analyze a robust web-based platform that empowers users to effortlessly navigate the complexities of airline reservations. By integrating advanced technologies and user-centric design principles, the platform aims to enhance the overall booking experience, from flight discovery to payment confirmation.
 - **Scope**: The scope of the system encompasses functionalities that enable users to explore available flights, select preferred seats, process secure payments, and receive instant booking confirmations. Emphasis is placed on optimizing the User Interface (UI) and User Experience (UX) to ensure intuitive navigation and efficient task completion. However, it is important to note that the system will not involve backend operations related to airline logistics, such as flight scheduling and maintenance.
 - **Definitions, Acronyms, and Abbreviations**: 
-  - ***API***: Application Programming Interface, facilitating seamless communication between different software applications.
-  - ***UI***: User Interface, the graphical layout of an application that users interact with.
-  - ***UX***: User Experience, encompassing users' perceptions and responses resulting from interaction with the system.
-  - ***Express.js***: A minimal and flexible Node.js web application framework that provides robust features for building web and mobile applications. It simplifies routing, middleware integration, and handling HTTP requests.
-  - ***MongoDB***: A NoSQL database system that uses JSON-like documents with dynamic schemas. It is well-suited for scalable and high-performance applications, storing data in a format that aligns closely with JavaScript objects.
-  - ***JavaScript***: A programming language commonly used for creating dynamic and interactive web pages. In the context of web development, JavaScript runs client-side in browsers and server-side with Node.js, enabling full-stack application development.
-  - ***Backend***: The server-side of a web application responsible for processing requests, managing databases, and executing business logic. Node.js and Express.js are commonly used for developing backend functionalities.
-  - ***Frontend***: The client-side of a web application that users interact with directly. It comprises HTML, CSS, and JavaScript components rendered in the browser, providing the graphical interface for users.
-  - ***REST API***: Representational State Transfer Application Programming Interface, a style of software architecture for defining scalable web services. Node.js and Express.js are often used to implement RESTful APIs that adhere to REST principles. 
-- **References**
+  - **API**: Application Programming Interface, facilitating seamless communication between different software applications.
+  - **UI**: User Interface, the graphical layout of an application that users interact with.
+  - **UX**: User Experience, encompassing users' perceptions and responses resulting from interaction with the system.
+  - **Express.js**: A minimal and flexible Node.js web application framework that provides robust features for building web and mobile applications. It simplifies routing, middleware integration, and handling HTTP requests.
+  - **MongoDB**: A NoSQL database system that uses JSON-like documents with dynamic schemas. It is well-suited for scalable and high-performance applications, storing data in a format that aligns closely with JavaScript objects.
+  - **JavaScript**: A programming language commonly used for creating dynamic and interactive web pages. In the context of web development, JavaScript runs client-side in browsers and server-side with Node.js, enabling full-stack application development.
+  - **Backend**: The server-side of a web application responsible for processing requests, managing databases, and executing business logic. Node.js and Express.js are commonly used for developing backend functionalities.
+  - **Frontend**: The client-side of a web application that users interact with directly. It comprises HTML, CSS, and JavaScript components rendered in the browser, providing the graphical interface for users.
+  - **REST API**: Representational State Transfer Application Programming Interface, a style of software architecture for defining scalable web services. Node.js and Express.js are often used to implement RESTful APIs that adhere to REST principles. 
 
-- ***Project Requirements***: 
-  - Project requirements management is crucial for project success. It involves identifying, documenting, and managing requirements. A comprehensive guide can be found in the PMBOK® Guide by the Project Management Institute (PMI) [source](https://www.pmi.org/pmbok-guide-standards/foundational/pmbok).
-  - An example of a Software Requirements Specification (SRS) that details technical requirements and the scope of a project can be found in the technical writing resources of Salt Lake Community College (SLCC) [source](https://www.slcc.edu/computer-information-systems/docs/understanding-srs.pdf).
-
-
-- ***Industry Standards***:
-  - The International Organization for Standardization (ISO) provides several standards for software quality, including ISO/IEC 25010:2011, which outlines the quality model for systems and software [source](https://www.iso.org/standard/35733.html).
-  - The Institute of Electrical and Electronics Engineers (IEEE) offers the IEEE 830-1998 standard for Software Requirements Specification (SRS) documents [source](https://ieeexplore.ieee.org/document/720574).
-
-- ***API Specifications***:
-  - The OpenAPI Specification (OAS) is a widely adopted standard for defining APIs. Information about OpenAPI can be found on the [OpenAPI Initiative website](https://www.openapis.org).
-  - Tools like Postman are used for testing and documenting APIs. More details are available on the [Postman website](https://www.postman.com).
-
-- ***Legal and Regulatory Guidelines***:
-  - The General Data Protection Regulation (GDPR) outlines data protection and privacy regulations in the European Union. Official information can be found on the [European Commission’s GDPR website](https://ec.europa.eu/info/law/law-topic/data-protection_en).
-  - Aviation-specific guidelines are provided by organizations such as the Federal Aviation Administration (FAA) [source](https://www.faa.gov) and the International Air Transport Association (IATA) [source](https://www.iata.org).
-
-- ***Design Patterns***
-  - The "Gang of Four" (GoF) design patterns book, "Design Patterns: Elements of Reusable Object-Oriented Software," provides a foundational resource for software design patterns [source](https://en.wikipedia.org/wiki/Design_Patterns).
-  - Architectural patterns like Model-View-Controller (MVC) and Microservices are detailed in various software architecture books and articles [source](https://martinfowler.com/articles/microservices.html).
-
-- ***Technical Research Papers***
-  - Research papers from the International Conference on Software Engineering (ICSE) and journals like the IEEE Transactions on Software Engineering are accessible through the [IEEE Xplore Digital Library](https://ieeexplore.ieee.org).
-  - The ACM Digital Library also provides access to numerous research papers in software engineering [source](https://dl.acm.org).
-
-- ***User Feedback***: User feedback can be gathered through surveys, usability tests, and feedback forms. Insights into effective user feedback collection methods are available on websites like [Usability.gov](https://www.usability.gov).
-
-
+- **References**:
+  - **Express.js Documentation**: Comprehensive guide and reference for using Express.js in the backend development of the application. Available at [Express.js](https://expressjs.com/en/4x/api.html).
+  - **MongoDB Documentation**: Official MongoDB documentation for database design, data modeling, and query operations. Available at [MongoDB](https://docs.mongodb.com/manual/).
+  - **JavaScript Info**: A detailed resource for learning JavaScript concepts and best practices. Available at [JavaScript.info](https://javascript.info/).
+  - **Node.js Documentation**: Official documentation for Node.js, covering modules, API reference, and guides. Available at [Node.js](https://nodejs.org/en/docs/).
+  - **OpenAPI Specification**: Standard for defining APIs, helpful in designing and documenting RESTful APIs. Available at [OpenAPI](https://swagger.io/specification/).
+  - **Postman Documentation**: Tool for testing APIs, providing resources for API design, testing, and documentation. Available at [Postman](https://learning.postman.com/docs/getting-started/introduction/).
+  - **HTML Documentation**: Official W3C documentation and guidelines for HTML. Available at [W3C HTML](https://www.w3.org/TR/html52/).
+  - **CSS Documentation**: Official W3C documentation and guidelines for CSS. Available at [W3C CSS](https://www.w3.org/Style/CSS/).
+  - **Google Chrome Developers**: Resource for web technologies including HTML, CSS, and JavaScript. Available at [Google Chrome Developers](https://developers.google.com/web).
 
 ## 4. Overall Description
 - **Product Perspective**: The proposed application serves as an independent system designed to interface with airline databases and external payment gateways. It operates autonomously to facilitate seamless flight booking and management processes for users.
 - **Product Functions**: The system offers the following core functionalities:
-  - ***User Registration and Authentication***: Allows users to create accounts securely and authenticate their identities for accessing booking services.
-  - ***Flight Search and Selection***: Enables users to search for available flights based on specified criteria such as dates, destinations, and preferences.
-  - ***Seat Reservation and Booking***:Facilitates the selection and reservation of seats on chosen flights, ensuring a personalized travel experience.
-  - ***Payment Processing***: Handles secure payment transactions through integration with external payment gateway APIs, ensuring reliability and security.
-  - ***Booking Confirmation and Itinerary Generation***: Provides users with instant booking confirmations and generates detailed itineraries containing flight details and reservations.
+  - **User Registration and Authentication**: Allows users to create accounts securely and authenticate their identities for accessing booking services.
+  - **Flight Search and Selection**: Enables users to search for available flights based on specified criteria such as dates, destinations, and preferences.
+  - **Seat Reservation and Booking**: Facilitates the selection and reservation of seats on chosen flights, ensuring a personalized travel experience.
+  - **Payment Processing**: Handles secure payment transactions through integration with external payment gateway APIs, ensuring reliability and security.
+  - **Booking Confirmation and Itinerary Generation**: Provides users with instant booking confirmations and generates detailed itineraries containing flight details and reservations.
 - **User Classes and Characteristics**: The application caters to two main user classes:
-  - ***Regular Users***: Primarily passengers seeking to book flights for travel purposes. They interact with the system to search, select, and book flights seamlessly.
-  - ***Admin Users***: System administrators responsible for managing flight schedules, user accounts, and content within the application. They have privileged access to administrative functionalities.
+  - **Regular Users**: Primarily passengers seeking to book flights for travel purposes. They interact with the system to search, select, and book flights seamlessly.
+  - **Admin Users**: System administrators responsible for managing flight schedules, user accounts, and content within the application. They have privileged access to administrative functionalities.
 
 - **Operating Environment**: The system operates within the following environment:
-  - ***Hardware***: Utilizes standard web server hardware capable of hosting and managing web applications efficiently.
-  - ***Software***: Relies on web browsers for client-side interactions, server-side scripting implemented with Node.js and JavaScript for backend operations, and MongoDB for data storage and management.
-  - ***Network***: Requires internet connectivity for users to access the application, ensuring real-time interaction and data exchange.
+  - **Hardware**: Utilizes standard web server hardware capable of hosting and managing web applications efficiently.
+  - **Software**: Relies on web browsers for client-side interactions, server-side scripting implemented with Node.js and JavaScript for backend operations, and MongoDB for data storage and management.
+  - **Network**: Requires internet connectivity for users to access the application, ensuring real-time interaction and data exchange.
 
 - **Assumptions and Dependencies**: The functionality and effectiveness of the system are contingent upon the following assumptions and dependencies:
-  - ***Availability of Reliable Internet Connection***: Users require consistent internet access to utilize the application's online booking services effectively.
-  - ***Integration with External Payment Gateway APIs***: Seamless integration with external payment gateway APIs ensures secure and efficient payment processing for booking transactions.
-
+  - **Availability of Reliable Internet Connection**: Users require consistent internet access to utilize the application's online booking services effectively.
+  - **Integration with External Payment Gateway APIs**: Seamless integration with external payment gateway APIs ensures secure and efficient payment processing for booking transactions.
 
 ## 5. Visual Mockup Reference
 - **Link or Screenshot**: Provide a link to the visual mockup or include a screenshot.
