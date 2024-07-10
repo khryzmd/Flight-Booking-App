@@ -84,9 +84,53 @@
 
 ## 9. Data Requirements
 
-- **Data Models**: Include simple diagrams if possible.
-- **Database Requirements**: Describe tables and relationships.
-- **Data Storage and Retrieval**: Explain how data will be stored and accessed.
+- **Data Models**: 
+  - User: { id, firstName, lastName, email, password, isAdmin, mobileNo }
+  - Flight: { id, airline, departureCity, destinationCity, departureDatetime, arrivalDatetime, price, availableSeats }
+  - Booking: { id, userId, flightIds, totalPrice, status }
+  - Payment: { id, bookingId, paymentDatetime, amount, paymentMethod }
+
+- **Database Requirements**: 
+
+    *Database Choice*
+
+    The application utilizes MongoDB for its document-oriented storage, which is well-suited for handling user, flight, booking, and payment data efficiently.
+
+    *Entity-Relationship Diagram (ERD)*
+
+    ```
+    [Users] One --- Many [Bookings]
+    [Flights] Many --- Many [Bookings]
+    [Bookings] One --- One [Payments]
+    ```
+
+    *Relationships*
+
+    1. **Users and Bookings**
+       - Each user can have multiple bookings.
+       - Each booking belongs to exactly one user.
+
+    2. **Flights and Bookings**
+       - Each flight can be booked by multiple users.
+       - Each booking can include multiple flights.
+
+    3. **Bookings and Payments**
+       - Each booking can have exactly one associated payment.
+       - Each payment corresponds to exactly one booking.
+   
+- **Data Storage and Retrieval**
+
+    Data in the flight booking application will be stored and accessed using MongoDB's document-oriented storage model. This approach allows flexibility in schema design and efficient storage of complex data structures
+
+    - **Storage**: 
+      - **Users**: User data, including details such as name, email, password hash, admin status, and mobile number, will be stored in the `Users` collection.
+      - **Flights**: Flight information, such as airline, departure city, destination city, departure and arrival times, price, and available seats, will be stored in the `Flights` collection.
+      - **Bookings**: Bookings made by users, linking users to flights they have booked, along with total price and booking status, will be stored in the `Bookings` collection.
+      - **Payments**: Payment details associated with bookings, including payment datetime, amount, and payment method, will be stored in the `Payments` collection.
+
+  - **Retrieval**: 
+    - Data will be accessed using Mongoose, which provides a straightforward interface for MongoDB queries. This allows efficient retrieval based on various criteria such as user ID, booking status, flight details, and payment information.
+    - Relationships between entities (e.g., users to bookings, flights to bookings) will be managed through Mongoose's schema definitions and population feature for references, ensuring data integrity and efficient retrieval.
 
 ## 10. External Interface Requirements
 
