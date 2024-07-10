@@ -1,10 +1,14 @@
 # Technical Specifications Document
 
 ## 1. Title Page
-- **Project Name**: 
-- **Version**: 
-- **Date**: 
+- **Project Name**: Flight Booking App
+- **Version**: 1.0
+- **Date**: July 17, 2024
 - **Author(s)**: 
+  - Arnel Sinadhan 
+  - Jeswel Gomez 
+  - Khryzmiel Dabu 
+  - Richmore Jubert Ravina
 
 ## 2. Table of Contents
 1. [Introduction](#3-introduction)
