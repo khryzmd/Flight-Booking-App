@@ -221,8 +221,8 @@
 
     *Entity-Relationship Diagram (ERD)*
 
-    ```[Users] One ------ Many [Bookings]```
-    ```[Flights] Many --- Many [Bookings]```
+    ```[Users] One ------ Many [Bookings]```<br>
+    ```[Flights] Many --- Many [Bookings]```<br>
     ```[Bookings] One ---- One [Payments]```
 
     *Relationships*
