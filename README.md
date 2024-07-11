@@ -42,55 +42,106 @@
 
 ## 7. Functional Requirements
 ### Use Cases
-- **Use Case 1**: User Registration
-  - **Title**: User Registration
-  - **Description**: Allows users to create an account using their email or social media accounts.
-  - **Actors**: User
-  - **Preconditions**: User accesses the registration page.
-  - **Postconditions**: User account is successfully created.
-  - **Main Flow**: 
-    1. User navigates to the registration page.
-    2. User enters their registration details (name, email, password).
-    3. System validates the entered data.
-    4. User selects registration method (email or social media).
-    5. System verifies user information.
-    6. User account is created and a confirmation email is sent.
-  - **Alternate Flows**: 
-    - If the user chooses social media registration, skip the email verification step.
-
-- **Use Case 2**: Flight Search and Booking
-  - **Title**: Flight Search and Booking
-  - **Description**: Allows users to search for flights based on origin, destination, dates, and other filters, and book flights.
+- **Use Case 1**: User Registration and Login
+  - **Title**: User Registration and Login
+  - **Description**: Allows users to create accounts and securely log in to access personalized features.
   - **Actors**: User, System
-  - **Preconditions**: User is logged in.
-  - **Postconditions**: Booking confirmation is sent to the user.
+  - **Preconditions**: User accesses the registration or login page.
+  - **Postconditions**: User successfully registers or logs in.
   - **Main Flow**: 
-    1. User enters search criteria (origin, destination, dates).
-    2. System queries the flight database based on the entered criteria.
-    3. System displays available flights matching the search criteria.
-    4. User selects a desired flight.
-    5. System confirms the booking and reserves seats.
-    6. Booking confirmation and details are sent to the user via email.
+    1. User navigates to the registration or login page.
+    2. If new user:
+      - User enters registration details (name, email, password).
+      - System validates inputs and checks for duplicate accounts.
+      - User account is created.
+    3. If existing user:
+      - User enters login credentials (email/username, password).
+      - System verifies credentials.
+      - User is authenticated and logged into the system.
   - **Alternate Flows**: 
-    - If no flights are available for the entered criteria, notify the user and suggest alternatives.
+    - If login credentials are incorrect, notify the user and prompt for correct credentials.
+    - Provide options for password recovery/reset if needed.
+
+- **Use Case 2**: Flight Search
+  - **Title**: Flight Search
+  - **Description**: Users can search for flights based on criteria like destination, dates, and number of passengers.
+  - **Actors**: User, System
+  - **Preconditions**: User is logged into the system.
+  - **Postconditions**: Available flights matching search criteria are displayed.
+  - **Main Flow**: 
+    1. User enters flight search criteria (origin, destination, dates, number of passengers).
+    2. System queries the flight database based on the entered criteria.
+    3. System displays a list of available flights that match the search criteria, including flight details (price, duration, layovers).
+
+  - **Alternate Flows**: 
+    - If no flights match the entered criteria, notify the user and suggest alternative dates or destinations.
+
+- **Use Case 3**: Booking Management
+  - **Title**: Booking Management
+  - **Description**: Users can view and manage their bookings, including cancellations and changes.
+  - **Actors**: User, System
+  - **Preconditions**: User is logged into the system and has bookings.
+  - **Postconditions**: Booking changes (cancellations, modifications) are successfully processed.
+  - **Main Flow**: 
+    1. User accesses their booking management section.
+    2. System retrieves and displays the user's current bookings.
+    3. User selects a booking to manage (cancel or modify).
+    4. System processes the requested action (cancellation or modification).
+    5. Confirmation of booking change is sent to the user via email.
+  - **Alternate Flows**: 
+    - Handle scenarios where cancellations or modifications are not allowed based on booking rules or timing.
+
+- **Use Case 4**: Payment Processing
+  - **Title**: Payment Processing
+  - **Description**: Secure payment gateway integration for ticket purchases.
+  - **Actors**: Payment Gateway, System
+  - **Preconditions**: User has selected a flight and confirmed booking details.
+  - **Postconditions**: Payment is successfully processed, and booking is confirmed.
+  - **Main Flow**: 
+    1. User selects payment method (credit/debit card, digital wallet).
+    2. User enters payment details securely.
+    3. System validates payment information and initiates payment through the selected payment gateway.
+    4. Payment gateway processes the payment securely.
+    5. System updates booking status to "confirmed" and generates a booking confirmation and itinerary.
+    6. Booking confirmation and e-ticket are sent to the user via email.
+  - **Alternate Flows**: 
+    - If payment fails, notify the user and provide options to retry payment or choose a different payment method.
 
 ### System Features
-- **Feature 1**: User Registration
-  - **Description**: Handles user account creation and authentication.
+- **Feature 1**: User Registration and Login
+  - **Description**: Facilitates user account creation and authentication.
   - **Priority**: High
-  - **Inputs**: User details (name, email, password), registration method selection.
-  - **Processing**: Validate inputs, verify user information, create user account.
-  - **Outputs**: Confirmation message or error notification.
-  - **Error Handling**: Handle duplicate email addresses, validation errors.
+  - **Inputs**: User details (name, email, password), login credentials.
+  - **Processing**: Validate inputs, create user account, authenticate user.
+  - **Outputs**: Confirmation message, error notifications.
+  - **Error Handling**: Handle duplicate email addresses, incorrect credentials.
 
 ### System Features
-- **Feature 2**: Flight Search and Booking
-  - **Description**: Enables users to search for flights, view details, and make bookings.
+- **Feature 2**: Flight Search
+  - **Description**: Enables users to search for flights based on specified criteria.
   - **Priority**: High
-  - **Inputs**: Search criteria (origin, destination, dates).
-  - **Processing**: Query flight database, display available flights, reserve seats.
-  - **Outputs**: List of available flights, booking confirmation.
-  - **Error Handling**: Notify users of no available flights, handle booking errors.
+  - **Inputs**: Flight search criteria (origin, destination, dates, number of passengers).
+  - **Processing**: Query flight database, filter results based on criteria.
+  - **Outputs**: List of available flights matching criteria, flight details.
+  - **Error Handling**: Notify users if no flights match criteria, handle database query errors.
+
+### System Features
+- **Feature 3**: Booking Management
+  - **Description**: Allows users to manage their flight bookings, including cancellations and modifications.
+  - **Priority**: Medium
+  - **Inputs**: User's booking details, action requests (cancel, modify).
+  - **Processing**: Retrieve user's bookings, process cancellation or modification requests.
+  - **Outputs**: Confirmation of booking changes, email notifications.
+  - **Error Handling**:Handle booking change errors, notify users of restrictions or errors in modification.
+
+### System Features
+- **Feature 4**: Payment Processing
+  - **Description**: Integrates secure payment gateway for processing ticket purchases.
+  - **Priority**: High
+  - **Inputs**: Payment details (credit/debit card information, digital wallet details).
+  - **Processing**: Validate payment information, process payment through 
+  - **Outputs**: Payment confirmation, booking status update, e-ticket generation.
+  - **Error Handling**: Handle payment failures, provide alternative payment options, notify users of transaction errors.
 
 ## 8. Non-Functional Requirements
 - **Performance**:
