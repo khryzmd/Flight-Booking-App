@@ -88,32 +88,122 @@
 
 ### Use Cases
 
-- **Use Case 1**:
-  - **Title**:
-  - **Description**:
-  - **Actors**:
-  - **Preconditions**:
-  - **Postconditions**:
-  - **Main Flow**:
-  - **Alternate Flows**:
+- **Use Case 1**: User Registration and Login
+  - **Title**: User Registration and Login
+  - **Description**: Allows users to create accounts and securely log in to access personalized features.
+  - **Actors**: User, System
+  - **Preconditions**: User accesses the registration or login page.
+  - **Postconditions**: User successfully registers or logs in.
+  - **Main Flow**: 
+    1. User navigates to the registration or login page.
+    2. If new user:
+      - User enters registration details (name, email, password).
+      - System validates inputs and checks for duplicate accounts.
+      - User account is created.
+    3. If existing user:
+      - User enters login credentials (email/username, password).
+      - System verifies credentials.
+      - User is authenticated and logged into the system.
+  - **Alternate Flows**: 
+    - If login credentials are incorrect, notify the user and prompt for correct credentials.
+    - Provide options for password recovery/reset if needed.
+
+- **Use Case 2**: Flight Search
+  - **Title**: Flight Search
+  - **Description**: Users can search for flights based on criteria like destination, dates, and number of passengers.
+  - **Actors**: User, System
+  - **Preconditions**: User is logged into the system.
+  - **Postconditions**: Available flights matching search criteria are displayed.
+  - **Main Flow**: 
+    1. User enters flight search criteria (origin, destination, dates, number of passengers).
+    2. System queries the flight database based on the entered criteria.
+    3. System displays a list of available flights that match the search criteria, including flight details (price, duration, layovers).
+
+  - **Alternate Flows**: 
+    - If no flights match the entered criteria, notify the user and suggest alternative dates or destinations.
+
+- **Use Case 3**: Booking Management
+  - **Title**: Booking Management
+  - **Description**: Users can view and manage their bookings, including cancellations and changes.
+  - **Actors**: User, System
+  - **Preconditions**: User is logged into the system and has bookings.
+  - **Postconditions**: Booking changes (cancellations, modifications) are successfully processed.
+  - **Main Flow**: 
+    1. User accesses their booking management section.
+    2. System retrieves and displays the user's current bookings.
+    3. User selects a booking to manage (cancel or modify).
+    4. System processes the requested action (cancellation or modification).
+    5. Confirmation of booking change is sent to the user via email.
+  - **Alternate Flows**: 
+    - Handle scenarios where cancellations or modifications are not allowed based on booking rules or timing.
+
+- **Use Case 4**: Payment Processing
+  - **Title**: Payment Processing
+  - **Description**: Secure payment gateway integration for ticket purchases.
+  - **Actors**: Payment Gateway, System
+  - **Preconditions**: User has selected a flight and confirmed booking details.
+  - **Postconditions**: Payment is successfully processed, and booking is confirmed.
+  - **Main Flow**: 
+    1. User selects payment method (credit/debit card, digital wallet).
+    2. User enters payment details securely.
+    3. System validates payment information and initiates payment through the selected payment gateway.
+    4. Payment gateway processes the payment securely.
+    5. System updates booking status to "confirmed" and generates a booking confirmation and itinerary.
+    6. Booking confirmation and e-ticket are sent to the user via email.
+  - **Alternate Flows**: 
+    - If payment fails, notify the user and provide options to retry payment or choose a different payment method.
 
 ### System Features
 
-- **Feature 1**:
-  - **Description**:
-  - **Priority**:
-  - **Inputs**:
-  - **Processing**:
-  - **Outputs**:
-  - **Error Handling**:
+- **Feature 1**: User Registration and Login
+  - **Description**: Facilitates user account creation and authentication.
+  - **Priority**: High
+  - **Inputs**: User details (name, email, password), login credentials.
+  - **Processing**: Validate inputs, create user account, authenticate user.
+  - **Outputs**: Confirmation message, error notifications.
+  - **Error Handling**: Handle duplicate email addresses, incorrect credentials.
+
+- **Feature 2**: Flight Search
+  - **Description**: Enables users to search for flights based on specified criteria.
+  - **Priority**: High
+  - **Inputs**: Flight search criteria (origin, destination, dates, number of passengers).
+  - **Processing**: Query flight database, filter results based on criteria.
+  - **Outputs**: List of available flights matching criteria, flight details.
+  - **Error Handling**: Notify users if no flights match criteria, handle database query errors.
+
+- **Feature 3**: Booking Management
+  - **Description**: Allows users to manage their flight bookings, including cancellations and modifications.
+  - **Priority**: Medium
+  - **Inputs**: User's booking details, action requests (cancel, modify).
+  - **Processing**: Retrieve user's bookings, process cancellation or modification requests.
+  - **Outputs**: Confirmation of booking changes, email notifications.
+  - **Error Handling**:Handle booking change errors, notify users of restrictions or errors in modification.
+
+- **Feature 4**: Payment Processing
+  - **Description**: Integrates secure payment gateway for processing ticket purchases.
+  - **Priority**: High
+  - **Inputs**: Payment details (credit/debit card information, digital wallet details).
+  - **Processing**: Validate payment information, process payment through 
+  - **Outputs**: Payment confirmation, booking status update, e-ticket generation.
+  - **Error Handling**: Handle payment failures, provide alternative payment options, notify users of transaction errors.
 
 ## 8. Non-Functional Requirements
-
-- **Performance**: Describe performance requirements.
-- **Security**: Outline security needs.
-- **Usability**: Detail user interface and experience considerations.
-- **Reliability**: Define reliability and availability requirements.
-- **Supportability**: Specify maintenance and support requirements.
+- **Performance**:
+  - The application should load within 3 seconds under normal usage conditions.
+  - Handle at least 1000 concurrent users during peak times without performance degradation.
+- **Security**:
+  - All user data should be encrypted in transit and at rest.
+  - Implement secure authentication mechanisms (e.g., OAuth for social media logins).
+  - Regular security audits and vulnerability assessments should be conducted to maintain robust security posture.
+- **Usability**:
+  - The user interface should be intuitive and responsive, supporting seamless navigation across different devices and screen sizes.
+  - Ensure compliance with accessibility standards to accommodate users with disabilities.
+- **Reliability**:
+  - The system should maintain an uptime of 99.9% or higher.
+  - Implement automated backup and recovery procedures to minimize downtime and data loss in case of system failures.
+- **Supportability**:
+  - Provide comprehensive user documentation and support resources, including FAQs and user guides.
+  - Maintain a helpdesk or support ticket system to promptly address and resolve user inquiries 
 
 ## 9. Data Requirements
 
@@ -131,11 +221,9 @@
 
     *Entity-Relationship Diagram (ERD)*
 
-    ```
-    [Users] One --- Many [Bookings]
-    [Flights] Many --- Many [Bookings]
-    [Bookings] One --- One [Payments]
-    ```
+    ```[Users] One ------ Many [Bookings]```
+    ```[Flights] Many --- Many [Bookings]```
+    ```[Bookings] One ---- One [Payments]```
 
     *Relationships*
 
