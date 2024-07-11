@@ -42,30 +42,73 @@
 
 ## 7. Functional Requirements
 ### Use Cases
-- **Use Case 1**:
-  - **Title**: 
-  - **Description**: 
-  - **Actors**: 
-  - **Preconditions**: 
-  - **Postconditions**: 
+- **Use Case 1**: User Registration
+  - **Title**: User Registration
+  - **Description**: Allows users to create an account using their email or social media accounts.
+  - **Actors**: User
+  - **Preconditions**: User accesses the registration page.
+  - **Postconditions**: User account is successfully created.
   - **Main Flow**: 
+    1. User navigates to the registration page.
+    2. User enters their registration details (name, email, password).
+    3. System validates the entered data.
+    4. User selects registration method (email or social media).
+    5. System verifies user information.
+    6. User account is created and a confirmation email is sent.
   - **Alternate Flows**: 
+    - If the user chooses social media registration, skip the email verification step.
+
+- **Use Case 2**: Flight Search and Booking
+  - **Title**: Flight Search and Booking
+  - **Description**: Allows users to search for flights based on origin, destination, dates, and other filters, and book flights.
+  - **Actors**: User, System
+  - **Preconditions**: User is logged in.
+  - **Postconditions**: Booking confirmation is sent to the user.
+  - **Main Flow**: 
+    1. User enters search criteria (origin, destination, dates).
+    2. System queries the flight database based on the entered criteria.
+    3. System displays available flights matching the search criteria.
+    4. User selects a desired flight.
+    5. System confirms the booking and reserves seats.
+    6. Booking confirmation and details are sent to the user via email.
+  - **Alternate Flows**: 
+    - If no flights are available for the entered criteria, notify the user and suggest alternatives.
 
 ### System Features
-- **Feature 1**:
-  - **Description**: 
-  - **Priority**: 
-  - **Inputs**: 
-  - **Processing**: 
-  - **Outputs**: 
-  - **Error Handling**: 
+- **Feature 1**: User Registration
+  - **Description**: Handles user account creation and authentication.
+  - **Priority**: High
+  - **Inputs**: User details (name, email, password), registration method selection.
+  - **Processing**: Validate inputs, verify user information, create user account.
+  - **Outputs**: Confirmation message or error notification.
+  - **Error Handling**: Handle duplicate email addresses, validation errors.
+
+### System Features
+- **Feature 2**: Flight Search and Booking
+  - **Description**: Enables users to search for flights, view details, and make bookings.
+  - **Priority**: High
+  - **Inputs**: Search criteria (origin, destination, dates).
+  - **Processing**: Query flight database, display available flights, reserve seats.
+  - **Outputs**: List of available flights, booking confirmation.
+  - **Error Handling**: Notify users of no available flights, handle booking errors.
 
 ## 8. Non-Functional Requirements
-- **Performance**: Describe performance requirements.
-- **Security**: Outline security needs.
-- **Usability**: Detail user interface and experience considerations.
-- **Reliability**: Define reliability and availability requirements.
-- **Supportability**: Specify maintenance and support requirements.
+- **Performance**:
+  - The application should load within 3 seconds under normal usage conditions.
+  - Handle at least 1000 concurrent users during peak times without performance degradation.
+- **Security**:
+  - All user data should be encrypted in transit and at rest.
+  - Implement secure authentication mechanisms (e.g., OAuth for social media logins).
+  - Regular security audits and vulnerability assessments should be conducted to maintain robust security posture.
+- **Usability**:
+  - The user interface should be intuitive and responsive, supporting seamless navigation across different devices and screen sizes.
+  - Ensure compliance with accessibility standards to accommodate users with disabilities.
+- **Reliability**:
+  - The system should maintain an uptime of 99.9% or higher.
+  - Implement automated backup and recovery procedures to minimize downtime and data loss in case of system failures.
+- **Supportability**:
+  - Provide comprehensive user documentation and support resources, including FAQs and user guides.
+  - Maintain a helpdesk or support ticket system to promptly address and resolve user inquiries 
 
 ## 9. Data Requirements
 - **Data Models**: Include simple diagrams if possible.
