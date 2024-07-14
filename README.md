@@ -287,7 +287,7 @@
     - *Notification API:* For sending booking confirmations and updates via email.
 
 - **Hardware Interfaces**: 
-  -The system will interact with standard web server hardware to host the application and manage user requests. No specialized hardware interfaces are required beyond typical web server capabilities.
+  - The system will interact with standard web server hardware to host the application and manage user requests. No specialized hardware interfaces are required beyond typical web server capabilities.
 
 - **Software Interfaces**: 
   - The application will interact with several software systems and libraries:
