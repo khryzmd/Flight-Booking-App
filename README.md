@@ -341,11 +341,7 @@
 
 - Supporting Information
 
-  - [*Entity-Relationship Diagram (ERD)*](#9-data-requirements): This visual diagram provides a comprehensive overview of the database schema, illustrating the intricate relationships between key entities essential for the Flight Booking App:
-    - **Users**: Detailed attributes for user identification, authentication, and account management.
-    - **Flights**: Comprehensive details on flight routes, schedules, pricing, and seat availability.
-    - **Bookings**: Clear depiction of relationships between users and their respective flight reservations.
-    - **Payments**: Secure connections between bookings and financial transactions, ensuring data integrity and financial security.
+  - [*Entity-Relationship Diagram (ERD)*](#9-data-requirements): Visual representation of the database schema highlighting relationships crucial for the Flight Booking App.
 
   - *Security Measures*: Delve into the robust security protocols implemented within the Flight Booking App to safeguard user data and transactions:
     - **Encryption and Authentication**: Utilizing industry-standard practices such as bcrypt for hashing passwords securely, ensuring sensitive user credentials remain protected within the database.
