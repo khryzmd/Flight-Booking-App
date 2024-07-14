@@ -45,7 +45,6 @@
   - **MongoDB Documentation**: Official MongoDB documentation for database design, data modeling, and query operations. Available at [MongoDB](https://docs.mongodb.com/manual/).
   - **JavaScript Info**: A detailed resource for learning JavaScript concepts and best practices. Available at [JavaScript.info](https://javascript.info/).
   - **Node.js Documentation**: Official documentation for Node.js, covering modules, API reference, and guides. Available at [Node.js](https://nodejs.org/en/docs/).
-  - **OpenAPI Specification**: Standard for defining APIs, helpful in designing and documenting RESTful APIs. Available at [OpenAPI](https://swagger.io/specification/).
   - **Postman Documentation**: Tool for testing APIs, providing resources for API design, testing, and documentation. Available at [Postman](https://learning.postman.com/docs/getting-started/introduction/).
   - **HTML Documentation**: Official W3C documentation and guidelines for HTML. Available at [W3C HTML](https://www.w3.org/TR/html52/).
   - **CSS Documentation**: Official W3C documentation and guidelines for CSS. Available at [W3C CSS](https://www.w3.org/Style/CSS/).
@@ -255,17 +254,94 @@
 
 ## 10. External Interface Requirements
 
-- **User Interfaces**: Provide sketches or descriptions of the user interface.
-- **API Interfaces**: Briefly describe any APIs.
-- **Hardware Interfaces**: Mention any required hardware interactions.
-- **Software Interfaces**: Note any software interactions.
+- **User Interfaces**: 
+  - The Flight Booking App will have a responsive and intuitive UI designed for seamless navigation across various devices, including desktops, tablets, and smartphones. Key screens will include:
+    - *Registration and Login:* Forms for creating accounts and logging in.
+    - *Flight Search:* A search interface with filters for origin, destination, dates, and number of passengers.
+    - *Booking Management:* A dashboard for users to view and manage their bookings.
+    - *Payment:* A secure interface for entering payment details.
+    - *Confirmation:* A page displaying booking confirmation and itinerary details.
+
+- **API Interfaces**: 
+  - The application will expose a set of RESTful APIs for various functionalities:
+    - *User Management API:* For user registration, authentication, and profile management.
+    - *Flight Search API:* To query available flights based on user criteria.
+    - *Booking API:* For creating, updating, and canceling bookings.
+    - *Payment API:* To process payments securely using external payment gateways.
+    - *Notification API:* For sending booking confirmations and updates via email.
+
+- **Hardware Interfaces**: 
+  -The system will interact with standard web server hardware to host the application and manage user requests. No specialized hardware interfaces are required beyond typical web server capabilities.
+
+- **Software Interfaces**: 
+  - The application will interact with several software systems and libraries:
+    - Node.js: For server-side scripting and handling backend operations.
+    - Express.js: For routing and middleware integration.
+    - MongoDB: For data storage and retrieval using Mongoose.
+    - External Payment Gateways (e.g., Stripe, PayPal): For secure payment processing.
+    - Email Service Providers (e.g., SendGrid): For sending booking confirmations and notifications.
 
 ## 11. Glossary
 
-- **Term 1**: Definition
-- **Term 2**: Definition
+- **Accessibility Standards**: Guidelines and requirements to ensure that web content is accessible to people with disabilities.
+- **API**: Application Programming Interface, facilitating seamless communication between different software applications.
+- **Backup and Recovery**: Processes and procedures for creating copies of data and systems to protect against data loss and enable recovery in case of system failures.
+- **Client-side Scripting**: Executing scripts within a user's web browser to create interactive web pages, often used for frontend functionalities.
+- **CSS**: Cascading Style Sheets, a style sheet language used for describing the presentation of a document written in HTML or XML.
+- **Data Encryption**: The process of converting plaintext data into ciphertext to protect it from unauthorized access.
+- **Database**: A structured set of data held in a computer, especially one that is accessible in various ways.
+- **Entity-Relationship Diagram (ERD)**: A diagram that depicts data elements and their relationships in a business or organizational context.
+- **Express.js**: A minimal and flexible Node.js web application framework that provides robust features for building web and mobile applications.
+- **Frontend**: The client-side of a web application that users interact with directly.
+- **Google Chrome Developers**: Resources for web technologies including HTML, CSS, and JavaScript, provided by Google.
+- **HTML**: Hypertext Markup Language, the standard markup language for creating web pages and web applications.
+- **Itinerary**: A detailed plan for a journey, including information about flights, accommodations, and activities.
+- **JavaScript**: A programming language commonly used for creating dynamic and interactive web pages.
+- **JSON**: JavaScript Object Notation, a lightweight data-interchange format that is easy for humans to read and write, and easy for machines to parse and generate.
+- **MongoDB**: A NoSQL database system that uses JSON-like documents with dynamic schemas.
+- **Mongoose**: An Object Data Modeling (ODM) library for MongoDB and Node.js, providing a straight-forward, schema-based solution to model application data.
+- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine, enabling server-side scripting.
+- **NoSQL**: A type of database that provides a mechanism for storage and retrieval of data modeled in means other than the tabular relations used in relational databases.
+- **OAuth**: An open standard for access delegation, commonly used as a way to grant websites or applications limited access to user information without exposing passwords.
+- **Performance**: The efficiency with which the system handles its operations and delivers results.
+- **Prototype**: A preliminary model or version of a product, used for testing ideas and gathering feedback before full development.
+- **REST API**: Representational State Transfer Application Programming Interface, a style of software architecture for defining scalable web services.
+- **Scalability**: The capability of the system to handle an increasing amount of work or its potential to be enlarged to accommodate growth.
+- **Security**: Measures taken to protect the system from unauthorized access, data breaches, and other security threats.
+- **Server-side Scripting**: Executing scripts on a web server to produce dynamic web pages, often used for backend functionalities.
+- **Session Management**: The process of securely managing user sessions, including authentication, authorization, and maintaining session state.
+- **Session Timeout**: The period of time a session remains active after the last user interaction before it expires and requires re-authentication.
+- **Stakeholder**: An individual or group with an interest in the success of a project, such as end users, clients, or management.
+- **UI**: User Interface, the graphical layout of an application that users interact with.
+- **User Authentication**: Verifying the identity of a user who is attempting to log in to a system.
+- **User Authorization**: Granting permissions and access rights to authenticated users based on their roles or privileges.
+- **User Registration**: The process through which users create accounts to access specific services or applications.
+- **UX**: User Experience, encompassing users' perceptions and responses resulting from interaction with the system.
+- **Version Control**: The management of changes to documents, computer programs, large web sites, and other collections of information.
+- **Wireframe**: A visual guide that represents the skeletal framework of a website or application, outlining its structure and functionality.
+
 
 ## 12. Appendices
 
-- **Supporting Information**: Add any additional information here.
-- **Revision History**: Record any changes made to the document with dates and descriptions.
+- Supporting Information
+
+  - [*Entity-Relationship Diagram (ERD)*](#entity-relationship-diagram-erd): This visual diagram provides a comprehensive overview of the database schema, illustrating the intricate relationships between key entities essential for the Flight Booking App:
+    - **Users**: Detailed attributes for user identification, authentication, and account management.
+    - **Flights**: Comprehensive details on flight routes, schedules, pricing, and seat availability.
+    - **Bookings**: Clear depiction of relationships between users and their respective flight reservations.
+    - **Payments**: Secure connections between bookings and financial transactions, ensuring data integrity and financial security.
+
+  - *Security Measures*: Delve into the robust security protocols implemented within the Flight Booking App to safeguard user data and transactions:
+    - **Encryption and Authentication**: Utilizing industry-standard practices such as bcrypt for hashing passwords securely, ensuring sensitive user credentials remain protected within the database.
+    - **JSON Web Tokens (JWT)**: Employed for generating and validating tokens, enabling secure information exchange between authenticated parties across the application.
+    - **Cross-Origin Resource Sharing (CORS)**: Implemented middleware to regulate access permissions across different origins, fortifying the app's security posture by mitigating cross-origin HTTP request vulnerabilities.
+
+  - *External API Documentation*: Links to vital external API documentation crucial for integrating with key services:
+    - **Stripe API**: Facilitates seamless payment processing, ensuring secure and efficient financial transactions for flight bookings.
+    - **Google Maps API**: Enhances user experience by providing interactive maps and location-based services for flight route visualization and travel planning.
+
+- Revision History:
+
+| Date       | Version | Description                             |
+|------------|---------|-----------------------------------------|
+| 2024-07-17 | 1.0     | Initial release of the Technical Specifications Document. |
