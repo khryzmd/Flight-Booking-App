@@ -340,15 +340,12 @@
 ## 12. Appendices
 
 - Supporting Information
-
-  - [*Entity-Relationship Diagram (ERD)*](#9-data-requirements): Visual representation of the database schema highlighting relationships crucial for the Flight Booking App.
-
-  - *Security Measures*: Delve into the robust security protocols implemented within the Flight Booking App to safeguard user data and transactions:
+  - *Security Measures*: 
     - **Encryption and Authentication**: Utilizing industry-standard practices such as bcrypt for hashing passwords securely, ensuring sensitive user credentials remain protected within the database.
     - **JSON Web Tokens (JWT)**: Employed for generating and validating tokens, enabling secure information exchange between authenticated parties across the application.
     - **Cross-Origin Resource Sharing (CORS)**: Implemented middleware to regulate access permissions across different origins, fortifying the app's security posture by mitigating cross-origin HTTP request vulnerabilities.
 
-  - *External API Documentation*: Links to vital external API documentation crucial for integrating with key services:
+  - *External API Documentation*: 
     - **Stripe API**: Facilitates seamless payment processing, ensuring secure and efficient financial transactions for flight bookings.
     - **Google Maps API**: Enhances user experience by providing interactive maps and location-based services for flight route visualization and travel planning.
 
