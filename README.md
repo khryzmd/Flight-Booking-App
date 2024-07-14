@@ -341,7 +341,7 @@
 
 - Supporting Information
 
-  - [*Entity-Relationship Diagram (ERD)*](#entity-relationship-diagram-erd): This visual diagram provides a comprehensive overview of the database schema, illustrating the intricate relationships between key entities essential for the Flight Booking App:
+  - [*Entity-Relationship Diagram (ERD)*](#9-data-requirements): This visual diagram provides a comprehensive overview of the database schema, illustrating the intricate relationships between key entities essential for the Flight Booking App:
     - **Users**: Detailed attributes for user identification, authentication, and account management.
     - **Flights**: Comprehensive details on flight routes, schedules, pricing, and seat availability.
     - **Bookings**: Clear depiction of relationships between users and their respective flight reservations.
