@@ -81,7 +81,7 @@
 ## 6. Features
 This section provides pseudocode for the main features of the Flight Booking App. The pseudocode is written in JavaScript and includes comments to make it accessible to both technical and non-technical readers. Each feature is detailed with its respective functions and logical steps, offering a clear overview of the intended implementation.
 
-**User Registration and Login**: 
+**User Registration and Login**: <br>
 Allows users to create accounts and securely log in to access personalized features.
 ```javascript
 // Function to register a new user
@@ -144,7 +144,7 @@ function generateAuthToken(user) {
 }
 
 ```
- **Flight Search**: 
+ **Flight Search**: <br>
  Users can search for flights based on criteria like destination, dates, and number of passengers.
 ```javascript
 // Function for searching flights
@@ -165,7 +165,7 @@ function findFlights(departure, destination, date) {
 }
 
 ```
-**Booking Management**:
+**Booking Management**: <br>
  Users can view and manage their bookings, including cancellations and changes
 ```javascript
 // Function for booking a flight
@@ -238,7 +238,7 @@ function processCancellation(reservation) {
 }
 
 ```
- **Payment Processing**: 
+ **Payment Processing**: <br>
  Secure payment gateway integration for ticket purchases.
 ```javascript
 // Function for processing a payment
@@ -263,7 +263,7 @@ function chargePaymentMethod(paymentDetails) {
 }
 
 ```
- **Booking Confirmation and Itinerary Generation**: 
+ **Booking Confirmation and Itinerary Generation**: <br>
  Automatically sends booking confirmations and generates detailed itineraries for users after successful bookings.
 ```javascript
 // Function for confirming a reservation
