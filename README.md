@@ -505,6 +505,7 @@ function generateItinerary(reservation) {
 - **Accessibility Standards**: Guidelines and requirements to ensure that web content is accessible to people with disabilities.
 - **API**: Application Programming Interface, facilitating seamless communication between different software applications.
 - **Backup and Recovery**: Processes and procedures for creating copies of data and systems to protect against data loss and enable recovery in case of system failures.
+- **Bootstrap**: A popular open-source toolkit for developing responsive, mobile-first web projects.
 - **Client-side Scripting**: Executing scripts within a user's web browser to create interactive web pages, often used for frontend functionalities.
 - **CSS**: Cascading Style Sheets, a style sheet language used for describing the presentation of a document written in HTML or XML.
 - **Data Encryption**: The process of converting plaintext data into ciphertext to protect it from unauthorized access.
@@ -524,20 +525,24 @@ function generateItinerary(reservation) {
 - **OAuth**: An open standard for access delegation, commonly used as a way to grant websites or applications limited access to user information without exposing passwords.
 - **Performance**: The efficiency with which the system handles its operations and delivers results.
 - **Prototype**: A preliminary model or version of a product, used for testing ideas and gathering feedback before full development.
+- **Pseudocode**: A high-level description of the operating principle of a computer program or algorithm, using natural language and simplified structures.
 - **REST API**: Representational State Transfer Application Programming Interface, a style of software architecture for defining scalable web services.
 - **Scalability**: The capability of the system to handle an increasing amount of work or its potential to be enlarged to accommodate growth.
 - **Security**: Measures taken to protect the system from unauthorized access, data breaches, and other security threats.
 - **Server-side Scripting**: Executing scripts on a web server to produce dynamic web pages, often used for backend functionalities.
+- **Session**: A period of interaction between a user and an application, from login to logout, including all related actions and transactions.
 - **Session Management**: The process of securely managing user sessions, including authentication, authorization, and maintaining session state.
 - **Session Timeout**: The period of time a session remains active after the last user interaction before it expires and requires re-authentication.
 - **Stakeholder**: An individual or group with an interest in the success of a project, such as end users, clients, or management.
-- **UI**: User Interface, the graphical layout of an application that users interact with.
+- **UI (User Interface)**: The graphical layout of an application that users interact with.
 - **User Authentication**: Verifying the identity of a user who is attempting to log in to a system.
 - **User Authorization**: Granting permissions and access rights to authenticated users based on their roles or privileges.
+- **User Interface Design**: The process of designing the appearance and layout of an application's user interface to enhance user experience.
 - **User Registration**: The process through which users create accounts to access specific services or applications.
-- **UX**: User Experience, encompassing users' perceptions and responses resulting from interaction with the system.
+- **UX (User Experience)**: Encompassing users' perceptions and responses resulting from interaction with the system.
 - **Version Control**: The management of changes to documents, computer programs, large web sites, and other collections of information.
 - **Wireframe**: A visual guide that represents the skeletal framework of a website or application, outlining its structure and functionality.
+
 
 
 ## 12. Appendices
