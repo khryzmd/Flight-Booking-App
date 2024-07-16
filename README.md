@@ -79,12 +79,215 @@
 - **Flight Booking App**: [Figma mockup](https://www.figma.com/design/CE5rf0pmJjTn1xv2wSG31x/Side-Project---Flight-Booking-App?t=AHLdDr026cA8HTYq-0)
 
 ## 6. Features
+This section provides pseudocode for the main features of the Flight Booking App. The pseudocode is written in JavaScript and includes comments to make it accessible to both technical and non-technical readers. Each feature is detailed with its respective functions and logical steps, offering a clear overview of the intended implementation.
 
-- **User Registration and Login**: Allows users to create accounts and securely log in to access personalized features.
-- **Flight Search**: Users can search for flights based on criteria like destination, dates, and number of passengers.
-- **Booking Management**: Users can view and manage their bookings, including cancellations and changes
-- **Payment Processing**: Secure payment gateway integration for ticket purchases.
-- **Booking Confirmation and Itinerary Generation**: Automatically sends booking confirmations and generates detailed itineraries for users after successful bookings.
+**User Registration and Login**: 
+Allows users to create accounts and securely log in to access personalized features.
+```javascript
+// Function to register a new user
+function registerUser(name, email, password) {
+    // Check if the email and password are valid
+    if (isEmailValid(email) && isPasswordStrong(password)) {
+        // Hash the password to store it securely
+        let hashedPassword = hashPassword(password)
+        // Create a new user with the provided details
+        let newUser = createUser(name, email, hashedPassword)
+        return newUser
+    } else {
+        // Return an error message if email or password is invalid
+        return "Invalid email or weak password"
+    }
+}
+
+function isEmailValid(email) {
+    // Validate email format (e.g., contains @ and domain)
+}
+
+function isPasswordStrong(password) {
+    // Check password strength (e.g., length, special characters)
+}
+
+function hashPassword(password) {
+    // Securely hash the password
+}
+
+function createUser(name, email, hashedPassword) {
+    // Save the new user in the database
+}
+```
+```javascript
+// Function to login a user
+function loginUser(email, password) {
+    // Find the user by email
+    let user = findUserByEmail(email)
+    // Check if user exists and password matches
+    if (user && checkPassword(password, user.hashedPassword)) {
+        // Generate an authentication token for the user
+        let token = generateAuthToken(user)
+        return token
+    } else {
+        // Return an error message if credentials are invalid
+        return "Invalid credentials"
+    }
+}
+
+function findUserByEmail(email) {
+    // Retrieve user from the database using email
+}
+
+function checkPassword(password, hashedPassword) {
+    // Verify the password matches the stored hashed password
+}
+
+function generateAuthToken(user) {
+    // Create a token to authenticate the user
+}
+
+```
+ **Flight Search**: 
+ Users can search for flights based on criteria like destination, dates, and number of passengers.
+```javascript
+// Function for searching flights
+function searchFlights(departure, destination, date) {
+    // Find flights based on departure, destination, and date
+    let flights = findFlights(departure, destination, date)
+    if (flights.length > 0) {
+        // Return the list of available flights
+        return flights
+    } else {
+        // Return a message if no flights are found
+        return "No flights available"
+    }
+}
+
+function findFlights(departure, destination, date) {
+    // Query the database or an external API to find flights
+}
+
+```
+**Booking Management**:
+ Users can view and manage their bookings, including cancellations and changes
+```javascript
+// Function for booking a flight
+function bookFlight(user, flightId, paymentDetails) {
+    // Find the flight by its ID
+    let flight = findFlightById(flightId)
+    if (flight) {
+        // Create a reservation for the user
+        let reservation = createReservation(user, flight)
+        // Process the payment
+        let paymentStatus = processPayment(paymentDetails)
+        if (paymentStatus === "Success") {
+            // Confirm the reservation if payment is successful
+            confirmReservation(reservation)
+            return reservation
+        } else {
+            // Return an error message if payment fails
+            return "Payment failed"
+        }
+    } else {
+        // Return an error message if the flight is not found
+        return "Flight not found"
+    }
+}
+
+function findFlightById(flightId) {
+    // Retrieve flight details from the database
+}
+
+function createReservation(user, flight) {
+    // Create a reservation record in the database
+}
+
+function processPayment(paymentDetails) {
+    // Handle the payment processing
+}
+
+function confirmReservation(reservation) {
+    // Confirm the reservation
+}
+
+```
+```javascript
+// Function for cancelling a reservation
+function cancelBooking(reservationId) {
+    // Find the reservation by its ID
+    let reservation = findReservationById(reservationId)
+    if (reservation) {
+        // Process the cancellation of the reservation
+        let cancellationStatus = processCancellation(reservation)
+        if (cancellationStatus === "Success") {
+            // Return a success message if cancellation is successful
+            return "Booking canceled successfully"
+        } else {
+            // Return an error message if cancellation fails
+            return "Cancellation failed"
+        }
+    } else {
+        // Return an error message if the reservation is not found
+        return "Reservation not found"
+    }
+}
+
+function findReservationById(reservationId) {
+    // Retrieve reservation details from the database
+}
+
+function processCancellation(reservation) {
+    // Handle the cancellation process
+}
+
+```
+ **Payment Processing**: 
+ Secure payment gateway integration for ticket purchases.
+```javascript
+// Function for processing a payment
+function processPayment(paymentDetails) {
+    // Validate payment details (e.g., card number, expiry date)
+    if (isPaymentValid(paymentDetails)) {
+        // Charge the payment method
+        let paymentStatus = chargePaymentMethod(paymentDetails)
+        return paymentStatus
+    } else {
+        // Return an error message if payment details are invalid
+        return "Invalid payment details"
+    }
+}
+
+function isPaymentValid(paymentDetails) {
+    // Check if payment details are valid
+}
+
+function chargePaymentMethod(paymentDetails) {
+    // Process the payment and return the status
+}
+
+```
+ **Booking Confirmation and Itinerary Generation**: 
+ Automatically sends booking confirmations and generates detailed itineraries for users after successful bookings.
+```javascript
+// Function for confirming a reservation
+function confirmReservation(reservation) {
+    // Confirm the reservation
+    let confirmationStatus = updateReservationStatus(reservation, "Confirmed")
+    if (confirmationStatus === "Success") {
+        // Generate the itinerary for the user
+        let itinerary = generateItinerary(reservation)
+        return itinerary
+    } else {
+        // Return an error message if confirmation fails
+        return "Reservation confirmation failed"
+    }
+}
+
+function updateReservationStatus(reservation, status) {
+    // Update the reservation status in the database
+}
+
+function generateItinerary(reservation) {
+    // Create an itinerary based on the reservation details
+}
+```
 
 ## 7. Functional Requirements
 
