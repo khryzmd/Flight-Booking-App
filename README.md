@@ -2,7 +2,7 @@
 
 ## 1. Title Page
 
-- **Project Name**: Flight Booking App
+- **Project Name**: Airline Booking System
 - **Version**: 1.0
 - **Date**: July 17, 2024
 - **Author(s)**:
@@ -76,10 +76,10 @@
 
 ## 5. Visual Mockup Reference
 
-- **Flight Booking App**: [Figma mockup](https://www.figma.com/design/CE5rf0pmJjTn1xv2wSG31x/Side-Project---Flight-Booking-App?t=AHLdDr026cA8HTYq-0)
+- **Airline Booking System**: [Figma mockup](https://www.figma.com/design/CE5rf0pmJjTn1xv2wSG31x/Side-Project---Flight-Booking-App?t=AHLdDr026cA8HTYq-0)
 
 ## 6. Features
-This section provides pseudocode for the main features of the Flight Booking App. The pseudocode is written in JavaScript and includes comments to make it accessible to both technical and non-technical readers. Each feature is detailed with its respective functions and logical steps, offering a clear overview of the intended implementation.
+This section provides pseudocode for the main features of the Airline Booking System. The pseudocode is written in JavaScript and includes comments to make it accessible to both technical and non-technical readers. Each feature is detailed with its respective functions and logical steps, offering a clear overview of the intended implementation.
 
 **User Registration and Login**: <br>
 Allows users to create accounts and securely log in to access personalized features.
@@ -433,27 +433,21 @@ function generateItinerary(reservation) {
 
   The application utilizes MongoDB for its document-oriented storage, which is well-suited for handling user, flight, booking, and payment data efficiently.
 
-  _Entity-Relationship Diagram (ERD)_
+  _Collections and Relationships_
 
-  `[Users] One ------ Many [Bookings]`<br>
-  `[Flights] Many --- Many [Bookings]`<br>
-  `[Bookings] One ---- One [Payments]`
+  - **Users Collection**
+    - Each document in the Users collection can have an array of Booking references (`bookings`).
 
-  _Relationships_
+  - **Bookings Collection**
+    - Each document in the Bookings collection can have references to Users (`user_id`), and an array of Flight references (`flights`).
+    - Each booking can have one associated Payment document (`payment_id`).
 
-  - **Users and Bookings**
+  - **Flights Collection**
+    - Each document in the Flights collection can be referenced by multiple Booking documents.
 
-    - Each user can have multiple bookings.
-    - Each booking belongs to exactly one user.
+  - **Payments Collection**
+    - Each document in the Payments collection corresponds to exactly one Booking document.
 
-  - **Flights and Bookings**
-
-    - Each flight can be booked by multiple users.
-    - Each booking can include multiple flights.
-
-  - **Bookings and Payments**
-    - Each booking can have exactly one associated payment.
-    - Each payment corresponds to exactly one booking.
 
 - **Data Storage and Retrieval**
 
@@ -474,7 +468,7 @@ function generateItinerary(reservation) {
 ## 10. External Interface Requirements
 
 - **User Interfaces**: 
-  - The Flight Booking App will have a responsive and intuitive UI designed for seamless navigation across various devices, including desktops, tablets, and smartphones. Key screens will include:
+  - The Airline Booking System will have a responsive and intuitive UI designed for seamless navigation across various devices, including desktops, tablets, and smartphones. Key screens will include:
     - *Registration and Login:* Forms for creating accounts and logging in.
     - *Flight Search:* A search interface with filters for origin, destination, dates, and number of passengers.
     - *Booking Management:* A dashboard for users to view and manage their bookings.
@@ -484,7 +478,7 @@ function generateItinerary(reservation) {
 - **API Interfaces**: 
   - The application will expose a set of RESTful APIs for various functionalities:
     - *User Management API:* For user registration, authentication, and profile management.
-    - *Flight Search API:* To query available flights based on user criteria.
+    - *Airline Search API:* To query available flights based on user criteria.
     - *Booking API:* For creating, updating, and canceling bookings.
     - *Payment API:* To process payments securely using external payment gateways.
     - *Notification API:* For sending booking confirmations and updates via email.
