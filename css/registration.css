@@ -30,14 +30,9 @@ nav {
   color: #ffffff;
   border: none;
 }
+/* End of Navbar */
 
-/* Hero */
-.hero {
-  background-image: url("../img/Hero.png");
-  background-size: cover;
-  height: 80vh;
-  background-position: center;
-}
+/* Sign up Modal */
 .suffixGroup {
   position: relative;
 }
@@ -65,12 +60,12 @@ nav {
   border: 2px solid #115779;
   color: #115779;
 }
+/* End of Sign up Modal */
 
 /* Login dropdown */
 .dropdown-menu {
   width: 350px;
 }
-
 .logInSubmitBtn {
   background-color: #115779;
   color: #ffffff;
@@ -85,19 +80,27 @@ nav {
   color: #115779;
   font-size: 14px;
 }
+
+.no-arrow::after {
+  display: none;
+}
+
+/* Media Queries for small, medium and large Screen */
 @media (max-width: 576px) {
+  /* Media query for dropdown menu */
   .dropdown-menu {
     right: 0;
   }
 }
-/* Media query for modal */
 @media (min-width: 768px) {
+  /* Media query for Sign up modal */
   .modal-dialog.modal-xl {
-    max-width: 768px; /* Adjust this value as needed */
+    max-width: 768px;
   }
 }
 @media (min-width: 1200px) {
+  /* Media query for Sign up modal */
   .modal-dialog.modal-xl {
-    max-width: 1140px; /* Adjust this value as needed for large screens */
+    max-width: 1140px;
   }
 }
