@@ -29,3 +29,4 @@ document.addEventListener("DOMContentLoaded", function () {
         .classList.remove("bottom__active");
     });
 });
+

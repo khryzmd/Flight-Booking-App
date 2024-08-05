@@ -46,19 +46,19 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <a href="#" class="navbar-brand">Airlines</a>
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item px-lg-4">
+            <li class="nav-item px-xl-4">
               <a class="nav-link" href="#">Search Flights</a>
             </li>
-            <li class="nav-item px-lg-4">
+            <li class="nav-item px-xl-4">
               <a class="nav-link" href="#manage-booking">Manage Booking</a>
             </li>
-            <li class="nav-item px-lg-4">
+            <li class="nav-item px-xl-4">
               <a class="nav-link" href="#deals">Deals</a>
             </li>
-            <li class="nav-item px-lg-4">
+            <li class="nav-item px-xl-4">
               <a class="nav-link" href="#explore">Explore</a>
             </li>
-            <li class="nav-item px-lg-4">
+            <li class="nav-item px-xl-4">
               <a class="nav-link" href="./about.html">About</a>
             </li>
           </ul>
@@ -98,24 +98,24 @@
               aria-labelledby="loginDropdown"
             >
               <form>
-                <div class="mb-5">
+                <div class="mb-3">
                   <input
                     type="text"
                     class="form-control"
-                    placeholder="Member ID or email address"
-                    aria-label="Member ID or email address"
+                    placeholder="Member ID or Email Address"
+                    aria-label="Member ID or Email Address"
                   />
                 </div>
                 <div class="mb-4">
-                  <a href="#" class="d-block text-end mt-2 forgotPassword"
-                    >Forgot password</a
-                  >
                   <input
                     type="password"
                     class="form-control"
                     placeholder="Enter your password"
                     aria-label="Enter your password"
                   />
+                  <a href="#" class="d-block text-end mt-2 forgotPassword"
+                    >Forgot password</a
+                  >
                 </div>
                 <button
                   type="submit"
@@ -252,8 +252,8 @@
         id="search-flights-form"
         class="d-flex flex-column align-items-center justify-content-evenly rounded"
       >
-        <div class="my-3">
-          <div class="form-check form-check-inline">
+        <div class="my-sm-5 mb-md-0 mt-4 mb-3">
+          <div class="form-check form-check-inline d-block d-sm-inline">
             <input
               class="form-check-input"
               type="radio"
@@ -264,7 +264,7 @@
             />
             <label class="form-check-label" for="inlineRadio1">One way</label>
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline d-block d-sm-inline">
             <input
               class="form-check-input"
               type="radio"
@@ -276,7 +276,7 @@
               >Round trip</label
             >
           </div>
-          <div class="form-check form-check-inline">
+          <div class="form-check form-check-inline d-block d-sm-inline">
             <input
               class="form-check-input"
               type="radio"
@@ -287,8 +287,11 @@
             <label class="form-check-label" for="inlineRadio3">Multicity</label>
           </div>
         </div>
-        <form class="row gx-3 gy-2 align-items-center" action="./flights.html">
-          <div class="col-sm-3">
+        <form
+          class="row gx-3 gy-2 align-items-center my-md-4"
+          action="./flights.html"
+        >
+          <div class="col-md-3">
             <label for="specificSizeSelect">From</label>
             <select class="form-select" id="specificSizeSelect">
               <option selected>
@@ -298,7 +301,7 @@
               <option value="2">Singapore, Singapore</option>
             </select>
           </div>
-          <div class="col-sm-3">
+          <div class="col-md-3">
             <label for="specificSizeSelect">To</label>
             <select class="form-select" id="specificSizeSelect">
               <option selected>Tokyo, Japan</option>
@@ -306,7 +309,7 @@
               <option value="2">Singapore, Singapore</option>
             </select>
           </div>
-          <div class="col-sm-3">
+          <div class="col-md-3">
             <label for="datePicker">Date</label>
             <input
               type="date"
@@ -315,7 +318,7 @@
               value="2024-07-30"
             />
           </div>
-          <div class="col-sm-3">
+          <div class="col-md-3">
             <label for="specificSizeSelect">Person</label>
             <select class="form-select" id="specificSizeSelect">
               <option selected>2 Economy</option>
@@ -340,7 +343,7 @@
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button
-            class="nav-link active"
+            class="nav-link active px-0"
             id="checkin-tab"
             data-bs-toggle="tab"
             data-bs-target="#home-tab-pane"
@@ -349,12 +352,13 @@
             aria-controls="home-tab-pane"
             aria-selected="true"
           >
-            <i class="fa-regular fa-square-check"></i> Check-In
+            <i class="fa-regular fa-square-check d-none d-sm-inline"></i>
+            Check-In
           </button>
         </li>
         <li class="nav-item" role="presentation">
           <button
-            class="nav-link"
+            class="nav-link px-0"
             id="manage-tab"
             data-bs-toggle="tab"
             data-bs-target="#home-tab-pane"
@@ -363,12 +367,12 @@
             aria-controls="#home-tab-pane"
             aria-selected="false"
           >
-            <i class="fa-solid fa-list-check"></i> Manage
+            <i class="fa-solid fa-list-check d-none d-sm-inline"></i> Manage
           </button>
         </li>
         <li class="nav-item" role="presentation">
           <button
-            class="nav-link"
+            class="nav-link px-0"
             id="status-tab"
             data-bs-toggle="tab"
             data-bs-target="#home-tab-pane"
@@ -377,7 +381,7 @@
             aria-controls="#home-tab-pane"
             aria-selected="false"
           >
-            <i class="fa-regular fa-clock"></i> Flight Status
+            <i class="fa-regular fa-clock d-none d-sm-inline"></i> Flight Status
           </button>
         </li>
       </ul>
@@ -442,7 +446,7 @@
           </div>
           <p>You might find it in the confirmation email or receipt</p>
           <div
-            class="form-check form-check-inline p-0 mt-5 d-flex align-items-center justify-content-between"
+            class="form-check form-check-inline p-0 mt-5 d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-between"
           >
             <input
               class="form-check-input"
@@ -454,7 +458,9 @@
               >I have read and understood the Terms and Conditions and
               FAQs</label
             >
-            <button type="submit" class="btn btn-primary">Check In</button>
+            <button type="submit" class="btn btn-primary mt-3 mt-lg-0">
+              Check In
+            </button>
           </div>
         </div>
         <div
@@ -484,8 +490,8 @@
       <p class="tour-package text-center mb-5">
         <strong>Our Tour Package</strong>
       </p>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col">
+      <div class="row row-cols-1 row-cols-lg-3 g-4">
+        <div class="col-lg col-8 mx-auto">
           <div class="card">
             <img
               src="./img/deal1.jpg"
@@ -509,7 +515,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-lg col-8 mx-auto">
           <div class="card">
             <img
               src="./img/deal2.jpg"
@@ -533,7 +539,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-lg col-8 mx-auto">
           <div class="card">
             <img
               src="./img/deal3.jpg"
@@ -562,11 +568,11 @@
     <!-- End of Deals Section -->
 
     <!-- Explore Section -->
-    <section id="explore" class="container mb-5 pb-5">
+    <section id="explore" class="container">
       <p class="popular text-center my-5 pt-5">
         <strong>Popular Destination</strong>
       </p>
-      <div class="popular-grid row row-cols-1 row-cols-xl-3 g-4 pb-5">
+      <div class="popular-grid row row-cols-2 row-cols-lg-3 g-4 pb-5">
         <div class="col">
           <div class="card text-bg-dark rounded-4">
             <img src="./img/dubai.jpg" class="card-img rounded-4" alt="dubai" />
@@ -632,8 +638,8 @@
         climate, and more to find the perfect destination for your next
         adventure.
       </p>
-      <div class="travel-guide-grid row row-cols-1 row-cols-xl-3 g-4">
-        <div class="col">
+      <div class="travel-guide-grid row row-cols-1 row-cols-lg-3 g-4">
+        <div class="col-lg col-md-8 col-9 mx-auto">
           <div class="card">
             <img
               src="./img/newyork.jpg"
@@ -656,7 +662,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-lg col-md-8 col-9 mx-auto">
           <div class="card">
             <img
               src="./img//maldives.jpg"
@@ -680,7 +686,7 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-lg col-md-8 col-9 mx-auto">
           <div class="card">
             <img
               src="./img/switzerland.jpeg"
@@ -709,18 +715,14 @@
     <!-- End of Explore Section -->
 
     <!-- About Us Section -->
-    <section id="feature" class="container mt-5 pt-5">
-      <p class="feature-us text-center mt-5 pt-5">
+    <section id="feature" class="container">
+      <p class="feature-us text-center">
         <strong>Why Choose Us</strong>
       </p>
       <div class="container px-4 pb-5" id="hanging-icons">
         <div class="row g-4 pb-5 pt-4 row-cols-1 row-cols-lg-3">
-          <div class="col d-flex align-items-start py-5">
-            <div
-              class="icon-square text-body-emphasis bg-body-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-            >
-              <img src="./img/airplane.png" alt="airline icon" height="45px" />
-            </div>
+          <div class="col d-flex flex-lg-column align-items-center py-5">
+            <img src="./img/airplane.png" alt="airline icon" height="100px" />
             <div>
               <h3 class="fs-2 text-body-emphasis">Easy & Quick Booking</h3>
               <p>
@@ -729,16 +731,13 @@
               </p>
             </div>
           </div>
-          <div class="col d-flex align-items-start py-5">
-            <div
-              class="icon-square text-body-emphasis bg-body-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-            >
-              <img
-                src="./img/best-price.png"
-                alt="best price icon"
-                height="45px"
-              />
-            </div>
+          <div class="col d-flex flex-lg-column align-items-center py-5">
+            <img
+              src="./img/best-price.png"
+              alt="best price icon"
+              height="100px"
+            />
+
             <div>
               <h3 class="fs-2 text-body-emphasis">Best Price Guarantee</h3>
               <p>
@@ -748,16 +747,13 @@
               </p>
             </div>
           </div>
-          <div class="col d-flex align-items-start py-5">
-            <div
-              class="icon-square text-body-emphasis bg-body-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-            >
-              <img
-                src="./img/customer-care.png"
-                alt="customer-care icon"
-                height="45px"
-              />
-            </div>
+          <div class="col d-flex flex-lg-column align-items-center py-5">
+            <img
+              src="./img/customer-care.png"
+              alt="customer-care icon"
+              height="100px"
+            />
+
             <div>
               <h3 class="fs-2 text-body-emphasis">Customer Care 24/7</h3>
               <p>
